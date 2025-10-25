@@ -18,17 +18,13 @@ def get_company_data(ticker):
     EndPoint Documentation:
     https://site.financialmodelingprep.com/developer/docs/stable/profile-cik
     """
-
-    # Local Variables
-    NEEDED_FIELDS = ["companyName", "exchange", "ipoDate"]
-
     # Begin Request
     url = f"{API_ENDPOINT}/profile?symbol={ticker}&apikey={API_KEY}"
     response = requests.get(url)
     data = response.json()
 
     # grabbing needed fields only
-    if NEEDED_FIELDS in data[0]:
+    if "companyName" or "exchange" or "ipoDate" in data[0]:
         return {
             "companyName": data[0]["companyName"],
             "exchange": data[0]["exchange"],
