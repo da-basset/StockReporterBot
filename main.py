@@ -1,6 +1,6 @@
 from fmp_requests import get_company_data, get_stock_price
 
-TICKER_LIST = ["AMZN"] #["AMZN", "AAPL", "TSLA"]
+TICKER_LIST = ["AMZN", "AAPL", "TSLA"]
 
 def main():
     data_list = {}

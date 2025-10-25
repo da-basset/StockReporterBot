@@ -8,8 +8,6 @@ import json
 # Global Variables
 API_ENDPOINT = "https://financialmodelingprep.com/stable"
 API_KEY =  os.getenv("FMP_API_KEY")
-TICKER_LIST = ["AMZN"] #["AMZN", "AAPL", "TSLA"]
-
 
 def get_company_data(ticker):
     """
